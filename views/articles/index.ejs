@@ -18,14 +18,15 @@
 		</div>
 		<div class="container">
 			<% articles.forEach(article => { %>
-			<div class="card mt-4">
-				<div class="card-body">
-					<h4 class="card-title"><%= article.title %></h4>
-					<div class="card-text mb-2"><%= article.categories %></div>
-					<a href="articles/<%= article.slug %>" class="btn btn-primary"
-						>Read More</a
-					>
-				</div>
+			<div class="card mt-2 border-dark">
+				<a
+					href="articles/<%= article.slug %>"
+					class="card-body pb-0"
+					style="display: block; text-decoration: none; color: inherit"
+				>
+					<h4><%= article.title %></h4>
+					<p><%= article.categories %></p>
+				</a>
 			</div>
 			<% }) %>
 		</div>
