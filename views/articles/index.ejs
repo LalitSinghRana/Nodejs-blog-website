@@ -12,13 +12,13 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Blog</title>
 	</head>
-	<body class="bg-warning">
+	<body>
 		<div class="p-2 bg-success d-flex flex-row-reverse">
 			<a href="/articles/new" class="btn btn-light">New Post</a>
 		</div>
 		<div class="container">
 			<% articles.forEach(article => { %>
-			<div class="card mt-2 border-dark">
+			<div class="card m-4 border-dark">
 				<a
 					href="articles/<%= article.slug %>"
 					class="card-body pb-0"

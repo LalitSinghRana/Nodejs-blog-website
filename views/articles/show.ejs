@@ -12,7 +12,7 @@
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Blog</title>
 	</head>
-	<body class="bg-warning">
+	<body>
 		<div class="p-2 bg-success d-flex">
 			<a href="/articles/index" class="btn btn-light mr-auto">Back to index</a>
 			<a href="/articles/edit/<%= article.id %>" class="btn btn-primary mr-3"
@@ -28,11 +28,11 @@
 		</div>
 		<div class="container">
 			<h1 class="mb-1"><%= article.title %></h1>
-			<div class="text-muted mb-2">
+			<p class="text-muted mb-2">
 				<%= article.createdAt.toLocaleDateString() %>
-			</div>
-			<div class="card-text mb-2"><%= article.categories %></div>
-			<div><%- article.sanitizedHtml %></div>
+			</p>
+			<h4 class="card-text mb-2"><%= article.categories %></h4>
+			<p class="lead"><%- article.sanitizedHtml %></p>
 		</div>
 	</body>
 </html>
